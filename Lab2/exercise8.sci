@@ -1,0 +1,20 @@
+n = -2:2
+x_n = [1,-2,3,6,0];
+y1_n = [0,6,3,-2,1];
+subplot(1,3,1);
+title("$Y_1(n)$");
+plot2d3(n,y1_n);
+n = -5:0;
+y2_n = [1,-2,3,6,0,0];
+subplot(1,3,2);
+title("$Y_2(n)$");
+h = gca();
+h.data_bounds = [-5,-6;5,6];
+plot2d3(n,y2_n);
+n = -4:0;
+y3_n = [1,-2,3,6,0];
+msignal = flipdim(y3_n,2)*2;
+subplot(1,3,3);
+title("$Y_3(n)$");
+h.data_bounds = [-5,-6;5,6];
+plot2d3(n,msignal);
